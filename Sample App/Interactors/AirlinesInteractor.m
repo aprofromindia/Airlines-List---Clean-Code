@@ -7,12 +7,13 @@
 //
 
 #import "AirlinesInteractor.h"
+#import <JSONModel/JSONModel.h>
 
 @implementation AirlinesInteractor{
     id<AirlinesRepository> _repository;
     id<PresenterInterface> _presenter;
     
-    NSArray *_airlines;
+    NSArray<ConvertOnDemand> *_airlines;
 }
 
 - (instancetype)initWithRepository:(id<AirlinesRepository>) repository

@@ -13,12 +13,13 @@
 #import "RESTClientImpl.h"
 #import "FavouriteAirlinesRepositoryImpl.h"
 #import "DetailPresenter.h"
+#import <JSONModel/JSONModel.h>
 
 @implementation MasterPresenter{
     AirlinesInteractor *_airlinesInteractor;
     FavouriteAirlinesInteractor *_favAirlinesInteractor;
     
-    NSArray *_airlines;
+    NSArray<ConvertOnDemand> *_airlines;
     NSArray *_favAirlines;
     
     id<MasterViewInterface> _view;

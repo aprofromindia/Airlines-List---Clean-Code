@@ -17,7 +17,7 @@
 
 @implementation MasterViewController{
     MasterPresenter *_presenter;
-    NSArray *_viewModel;
+    NSArray<ConvertOnDemand> *_viewModel;
     BOOL _isShowingFavorites;
 }
 
