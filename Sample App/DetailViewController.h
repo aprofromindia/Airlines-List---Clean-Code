@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewInterface.h"
 
-@interface DetailViewController : UIViewController
+@class AirlineModel, DetailPresenter;
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@interface DetailViewController : UIViewController<DetailViewInterface>
+
+/// Detail presenter.
+@property (nonatomic) DetailPresenter *presenter;
 
 @end
 

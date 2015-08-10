@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DF7B7A88FC16CEB73BD5A35 /* libPods-Sample AppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A41F72FF023B91C1FB0A00C /* libPods-Sample AppTests.a */; };
+		7B540266BEAD4B2B6F146A77 /* libPods-Sample App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF5FC18D7ADF0706015801D /* libPods-Sample App.a */; };
+		A26D13C81B50724B00A0AAE1 /* MasterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13C71B50724B00A0AAE1 /* MasterPresenter.m */; };
+		A26D13CB1B50725D00A0AAE1 /* DetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13CA1B50725D00A0AAE1 /* DetailPresenter.m */; };
+		A26D13CE1B510B6500A0AAE1 /* AirlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13CD1B510B6500A0AAE1 /* AirlineModel.m */; };
+		A26D13D11B51423200A0AAE1 /* AirlinesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13D01B51423200A0AAE1 /* AirlinesInteractor.m */; };
+		A26D13D41B51479D00A0AAE1 /* FavouriteAirlinesInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13D31B51479D00A0AAE1 /* FavouriteAirlinesInteractor.m */; };
+		A26D13D81B51573300A0AAE1 /* FavouriteAirlinesRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13D71B51573300A0AAE1 /* FavouriteAirlinesRepositoryImpl.m */; };
+		A26D13DC1B515BE500A0AAE1 /* AirlinesRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13DB1B515BE500A0AAE1 /* AirlinesRepositoryImpl.m */; };
+		A26D13F11B528EA200A0AAE1 /* AirlineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13F01B528EA200A0AAE1 /* AirlineTableViewCell.m */; };
+		A26D13F31B532C7600A0AAE1 /* RESTClientImplSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13F21B532C7600A0AAE1 /* RESTClientImplSpec.m */; };
 		A2A826DD1B4F059600FB3695 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A826DC1B4F059600FB3695 /* main.m */; };
 		A2A826E01B4F059600FB3695 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A826DF1B4F059600FB3695 /* AppDelegate.m */; };
 		A2A826E31B4F059600FB3695 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A826E21B4F059600FB3695 /* MasterViewController.m */; };
@@ -14,7 +25,8 @@
 		A2A826E91B4F059600FB3695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2A826E71B4F059600FB3695 /* Main.storyboard */; };
 		A2A826EB1B4F059600FB3695 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2A826EA1B4F059600FB3695 /* Images.xcassets */; };
 		A2A826EE1B4F059600FB3695 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2A826EC1B4F059600FB3695 /* LaunchScreen.xib */; };
-		A2A826FA1B4F059700FB3695 /* Sample_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A826F91B4F059700FB3695 /* Sample_AppTests.m */; };
+		A2F389421B545A630075DA05 /* MasterViewControllerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F389411B545A630075DA05 /* MasterViewControllerSpec.m */; };
+		A2F8100E1B4F0BD9008E736E /* RESTClientImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F8100D1B4F0BD9008E736E /* RESTClientImpl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +40,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2CF5FC18D7ADF0706015801D /* libPods-Sample App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sample App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42C3917F9F2D57E8DA4A6E4D /* Pods-Sample AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sample AppTests/Pods-Sample AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		7CFC67A66CDC0B0AB959C61F /* Pods-Sample App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sample App/Pods-Sample App.debug.xcconfig"; sourceTree = "<group>"; };
+		93AE37C807F2110835C568B4 /* Pods-Sample App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sample App/Pods-Sample App.release.xcconfig"; sourceTree = "<group>"; };
+		9A41F72FF023B91C1FB0A00C /* libPods-Sample AppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sample AppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A26B11721B53B49000145486 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A26D13C61B50724B00A0AAE1 /* MasterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterPresenter.h; path = Presenters/MasterPresenter.h; sourceTree = "<group>"; };
+		A26D13C71B50724B00A0AAE1 /* MasterPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterPresenter.m; path = Presenters/MasterPresenter.m; sourceTree = "<group>"; };
+		A26D13C91B50725D00A0AAE1 /* DetailPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailPresenter.h; path = Presenters/DetailPresenter.h; sourceTree = "<group>"; };
+		A26D13CA1B50725D00A0AAE1 /* DetailPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailPresenter.m; path = Presenters/DetailPresenter.m; sourceTree = "<group>"; };
+		A26D13CC1B510B6500A0AAE1 /* AirlineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirlineModel.h; path = Entities/AirlineModel.h; sourceTree = "<group>"; };
+		A26D13CD1B510B6500A0AAE1 /* AirlineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirlineModel.m; path = Entities/AirlineModel.m; sourceTree = "<group>"; };
+		A26D13CF1B51423200A0AAE1 /* AirlinesInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirlinesInteractor.h; path = Interactors/AirlinesInteractor.h; sourceTree = "<group>"; };
+		A26D13D01B51423200A0AAE1 /* AirlinesInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirlinesInteractor.m; path = Interactors/AirlinesInteractor.m; sourceTree = "<group>"; };
+		A26D13D21B51479D00A0AAE1 /* FavouriteAirlinesInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteAirlinesInteractor.h; path = Interactors/FavouriteAirlinesInteractor.h; sourceTree = "<group>"; };
+		A26D13D31B51479D00A0AAE1 /* FavouriteAirlinesInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteAirlinesInteractor.m; path = Interactors/FavouriteAirlinesInteractor.m; sourceTree = "<group>"; };
+		A26D13D61B51573300A0AAE1 /* FavouriteAirlinesRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavouriteAirlinesRepositoryImpl.h; path = Repositories/FavouriteAirlinesRepositoryImpl.h; sourceTree = "<group>"; };
+		A26D13D71B51573300A0AAE1 /* FavouriteAirlinesRepositoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavouriteAirlinesRepositoryImpl.m; path = Repositories/FavouriteAirlinesRepositoryImpl.m; sourceTree = "<group>"; };
+		A26D13DA1B515BE500A0AAE1 /* AirlinesRepositoryImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirlinesRepositoryImpl.h; path = Repositories/AirlinesRepositoryImpl.h; sourceTree = "<group>"; };
+		A26D13DB1B515BE500A0AAE1 /* AirlinesRepositoryImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirlinesRepositoryImpl.m; path = Repositories/AirlinesRepositoryImpl.m; sourceTree = "<group>"; };
+		A26D13EB1B5273D300A0AAE1 /* ViewInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewInterface.h; path = Presenters/ViewInterface.h; sourceTree = "<group>"; };
+		A26D13EC1B52780100A0AAE1 /* PresenterInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PresenterInterface.h; path = Interactors/PresenterInterface.h; sourceTree = "<group>"; };
+		A26D13ED1B52785600A0AAE1 /* AirlinesRepository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AirlinesRepository.h; path = Entities/AirlinesRepository.h; sourceTree = "<group>"; };
+		A26D13EF1B528EA200A0AAE1 /* AirlineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirlineTableViewCell.h; path = View/AirlineTableViewCell.h; sourceTree = "<group>"; };
+		A26D13F01B528EA200A0AAE1 /* AirlineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirlineTableViewCell.m; path = View/AirlineTableViewCell.m; sourceTree = "<group>"; };
+		A26D13F21B532C7600A0AAE1 /* RESTClientImplSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTClientImplSpec.m; sourceTree = "<group>"; };
 		A2A826D71B4F059600FB3695 /* Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A826DB1B4F059600FB3695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2A826DC1B4F059600FB3695 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,7 +80,10 @@
 		A2A826ED1B4F059600FB3695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A2A826F31B4F059700FB3695 /* Sample AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sample AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A826F81B4F059700FB3695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2A826F91B4F059700FB3695 /* Sample_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sample_AppTests.m; sourceTree = "<group>"; };
+		A2F389411B545A630075DA05 /* MasterViewControllerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewControllerSpec.m; sourceTree = "<group>"; };
+		A2F8100C1B4F0BD9008E736E /* RESTClientImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RESTClientImpl.h; path = Networking/RESTClientImpl.h; sourceTree = "<group>"; };
+		A2F8100D1B4F0BD9008E736E /* RESTClientImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RESTClientImpl.m; path = Networking/RESTClientImpl.m; sourceTree = "<group>"; };
+		BBBE3E7E2CDBADB4136C76C5 /* Pods-Sample AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sample AppTests/Pods-Sample AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B540266BEAD4B2B6F146A77 /* libPods-Sample App.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,18 +99,64 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF7B7A88FC16CEB73BD5A35 /* libPods-Sample AppTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FE403816A780FE94D1DA6F9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2CF5FC18D7ADF0706015801D /* libPods-Sample App.a */,
+				9A41F72FF023B91C1FB0A00C /* libPods-Sample AppTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A26D13BD1B4F175B00A0AAE1 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				A26D13EC1B52780100A0AAE1 /* PresenterInterface.h */,
+				A26D13CF1B51423200A0AAE1 /* AirlinesInteractor.h */,
+				A26D13D01B51423200A0AAE1 /* AirlinesInteractor.m */,
+				A26D13D21B51479D00A0AAE1 /* FavouriteAirlinesInteractor.h */,
+				A26D13D31B51479D00A0AAE1 /* FavouriteAirlinesInteractor.m */,
+			);
+			name = Interactors;
+			sourceTree = "<group>";
+		};
+		A26D13BE1B505F6300A0AAE1 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				A26D13EB1B5273D300A0AAE1 /* ViewInterface.h */,
+				A26D13C61B50724B00A0AAE1 /* MasterPresenter.h */,
+				A26D13C71B50724B00A0AAE1 /* MasterPresenter.m */,
+				A26D13C91B50725D00A0AAE1 /* DetailPresenter.h */,
+				A26D13CA1B50725D00A0AAE1 /* DetailPresenter.m */,
+			);
+			name = Presenters;
+			sourceTree = "<group>";
+		};
+		A26D13D51B5156F400A0AAE1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				A2F8100C1B4F0BD9008E736E /* RESTClientImpl.h */,
+				A2F8100D1B4F0BD9008E736E /* RESTClientImpl.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
 		A2A826CE1B4F059600FB3695 = {
 			isa = PBXGroup;
 			children = (
+				A26B11721B53B49000145486 /* README.md */,
 				A2A826D91B4F059600FB3695 /* Sample App */,
 				A2A826F61B4F059700FB3695 /* Sample AppTests */,
 				A2A826D81B4F059600FB3695 /* Products */,
+				B1A8560B90E946192286820A /* Pods */,
+				1FE403816A780FE94D1DA6F9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,12 +172,13 @@
 		A2A826D91B4F059600FB3695 /* Sample App */ = {
 			isa = PBXGroup;
 			children = (
+				A2A827031B4F05A000FB3695 /* Views */,
+				A26D13BE1B505F6300A0AAE1 /* Presenters */,
+				A26D13BD1B4F175B00A0AAE1 /* Interactors */,
+				A2F8100B1B4F0ABF008E736E /* Entities */,
+				A2F8100F1B4F0BDD008E736E /* Repository */,
 				A2A826DE1B4F059600FB3695 /* AppDelegate.h */,
 				A2A826DF1B4F059600FB3695 /* AppDelegate.m */,
-				A2A826E11B4F059600FB3695 /* MasterViewController.h */,
-				A2A826E21B4F059600FB3695 /* MasterViewController.m */,
-				A2A826E41B4F059600FB3695 /* DetailViewController.h */,
-				A2A826E51B4F059600FB3695 /* DetailViewController.m */,
 				A2A826E71B4F059600FB3695 /* Main.storyboard */,
 				A2A826EA1B4F059600FB3695 /* Images.xcassets */,
 				A2A826EC1B4F059600FB3695 /* LaunchScreen.xib */,
@@ -110,8 +199,9 @@
 		A2A826F61B4F059700FB3695 /* Sample AppTests */ = {
 			isa = PBXGroup;
 			children = (
-				A2A826F91B4F059700FB3695 /* Sample_AppTests.m */,
 				A2A826F71B4F059700FB3695 /* Supporting Files */,
+				A26D13F21B532C7600A0AAE1 /* RESTClientImplSpec.m */,
+				A2F389411B545A630075DA05 /* MasterViewControllerSpec.m */,
 			);
 			path = "Sample AppTests";
 			sourceTree = "<group>";
@@ -124,6 +214,52 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A2A827031B4F05A000FB3695 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A26D13EF1B528EA200A0AAE1 /* AirlineTableViewCell.h */,
+				A26D13F01B528EA200A0AAE1 /* AirlineTableViewCell.m */,
+				A2A826E11B4F059600FB3695 /* MasterViewController.h */,
+				A2A826E21B4F059600FB3695 /* MasterViewController.m */,
+				A2A826E41B4F059600FB3695 /* DetailViewController.h */,
+				A2A826E51B4F059600FB3695 /* DetailViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A2F8100B1B4F0ABF008E736E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A26D13ED1B52785600A0AAE1 /* AirlinesRepository.h */,
+				A26D13CC1B510B6500A0AAE1 /* AirlineModel.h */,
+				A26D13CD1B510B6500A0AAE1 /* AirlineModel.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		A2F8100F1B4F0BDD008E736E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A26D13D51B5156F400A0AAE1 /* Networking */,
+				A26D13DA1B515BE500A0AAE1 /* AirlinesRepositoryImpl.h */,
+				A26D13DB1B515BE500A0AAE1 /* AirlinesRepositoryImpl.m */,
+				A26D13D61B51573300A0AAE1 /* FavouriteAirlinesRepositoryImpl.h */,
+				A26D13D71B51573300A0AAE1 /* FavouriteAirlinesRepositoryImpl.m */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		B1A8560B90E946192286820A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7CFC67A66CDC0B0AB959C61F /* Pods-Sample App.debug.xcconfig */,
+				93AE37C807F2110835C568B4 /* Pods-Sample App.release.xcconfig */,
+				BBBE3E7E2CDBADB4136C76C5 /* Pods-Sample AppTests.debug.xcconfig */,
+				42C3917F9F2D57E8DA4A6E4D /* Pods-Sample AppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2A826FD1B4F059700FB3695 /* Build configuration list for PBXNativeTarget "Sample App" */;
 			buildPhases = (
+				31CF5A9583F0F015BF2044BE /* Check Pods Manifest.lock */,
 				A2A826D31B4F059600FB3695 /* Sources */,
 				A2A826D41B4F059600FB3695 /* Frameworks */,
 				A2A826D51B4F059600FB3695 /* Resources */,
+				4C66709365726B210E16A914 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2A827001B4F059700FB3695 /* Build configuration list for PBXNativeTarget "Sample AppTests" */;
 			buildPhases = (
+				D3C7BD64DB263B1055D3C167 /* Check Pods Manifest.lock */,
 				A2A826EF1B4F059700FB3695 /* Sources */,
 				A2A826F01B4F059700FB3695 /* Frameworks */,
 				A2A826F11B4F059700FB3695 /* Resources */,
+				BCBC145253E272BAA60BDAF3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -219,6 +359,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		31CF5A9583F0F015BF2044BE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C66709365726B210E16A914 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sample App/Pods-Sample App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCBC145253E272BAA60BDAF3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sample AppTests/Pods-Sample AppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D3C7BD64DB263B1055D3C167 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A2A826D31B4F059600FB3695 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -226,7 +429,16 @@
 			files = (
 				A2A826E01B4F059600FB3695 /* AppDelegate.m in Sources */,
 				A2A826E31B4F059600FB3695 /* MasterViewController.m in Sources */,
+				A26D13C81B50724B00A0AAE1 /* MasterPresenter.m in Sources */,
+				A26D13CB1B50725D00A0AAE1 /* DetailPresenter.m in Sources */,
+				A26D13D41B51479D00A0AAE1 /* FavouriteAirlinesInteractor.m in Sources */,
+				A2F8100E1B4F0BD9008E736E /* RESTClientImpl.m in Sources */,
+				A26D13DC1B515BE500A0AAE1 /* AirlinesRepositoryImpl.m in Sources */,
+				A26D13D81B51573300A0AAE1 /* FavouriteAirlinesRepositoryImpl.m in Sources */,
+				A26D13CE1B510B6500A0AAE1 /* AirlineModel.m in Sources */,
 				A2A826DD1B4F059600FB3695 /* main.m in Sources */,
+				A26D13F11B528EA200A0AAE1 /* AirlineTableViewCell.m in Sources */,
+				A26D13D11B51423200A0AAE1 /* AirlinesInteractor.m in Sources */,
 				A2A826E61B4F059600FB3695 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +447,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2A826FA1B4F059700FB3695 /* Sample_AppTests.m in Sources */,
+				A26D13F31B532C7600A0AAE1 /* RESTClientImplSpec.m in Sources */,
+				A2F389421B545A630075DA05 /* MasterViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +564,7 @@
 		};
 		A2A826FE1B4F059700FB3695 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CFC67A66CDC0B0AB959C61F /* Pods-Sample App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Sample App/Info.plist";
@@ -361,6 +575,7 @@
 		};
 		A2A826FF1B4F059700FB3695 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93AE37C807F2110835C568B4 /* Pods-Sample App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Sample App/Info.plist";
@@ -371,6 +586,7 @@
 		};
 		A2A827011B4F059700FB3695 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBBE3E7E2CDBADB4136C76C5 /* Pods-Sample AppTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -390,6 +606,7 @@
 		};
 		A2A827021B4F059700FB3695 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42C3917F9F2D57E8DA4A6E4D /* Pods-Sample AppTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -422,6 +639,7 @@
 				A2A826FF1B4F059700FB3695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A2A827001B4F059700FB3695 /* Build configuration list for PBXNativeTarget "Sample AppTests" */ = {
 			isa = XCConfigurationList;
@@ -430,6 +648,7 @@
 				A2A827021B4F059700FB3695 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewInterface.h"
 
-@interface MasterViewController : UITableViewController
-
+@interface MasterViewController : UITableViewController<MasterViewInterface>
 
 @end
-

@@ -8,39 +8,56 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import <MBProgressHUD/MBProgressHUD.h>
+#import "MasterPresenter.h"
+#import "AirlineModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "AirlineTableViewCell.h"
 
-@interface MasterViewController ()
 
-@property NSMutableArray *objects;
-@end
-
-@implementation MasterViewController
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
+@implementation MasterViewController{
+    MasterPresenter *_presenter;
+    NSArray *_viewModel;
+    BOOL _isShowingFavorites;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    _isShowingFavorites = NO;
+    [self p_showHud];
+    _presenter = [[MasterPresenter alloc] initWithView:self];
+    
+    //setting up persisting favourite list.
+    [[NSNotificationCenter defaultCenter] addObserver:_presenter selector:@selector(saveFavouritesList) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
+- (void)viewWillAppear:(BOOL)animated{
+    if (_isShowingFavorites) {
+        [self.tableView reloadData];
     }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+- (void)setViewModel:(NSArray *)viewModel{
+    [self p_showHud];
+    if (viewModel) {
+        _viewModel = viewModel;
+        [self.tableView reloadData];
+    }else{
+        [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Network Error", nil)
+                                    message:NSLocalizedString(@"Please try again later", nil)
+                                   delegate:nil cancelButtonTitle:NSLocalizedString(@"OK", nil)
+                          otherButtonTitles:nil] show];
+    }
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+}
+
+#pragma mark - private methods
+
+- (void) p_showHud{
+    if (![MBProgressHUD HUDForView:self.view]) {
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    }
 }
 
 #pragma mark - Segues
@@ -48,40 +65,37 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        
+        AirlineModel *detailVM = _viewModel[indexPath.row];
+        
+        DetailViewController *detailVC = [segue destinationViewController];
+        detailVC.presenter = [_presenter detailPresenterWitView:detailVC model:detailVM];
     }
 }
 
 #pragma mark - Table View
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return _viewModel.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    AirlineTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    AirlineModel *airline = _viewModel[indexPath.row];
+    [cell.imgView sd_setImageWithURL:[NSURL URLWithString:airline.logoURL]];
+    cell.label.text = airline.name;
+    
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+- (IBAction) p_toggleFavouriteList{
+    _isShowingFavorites = !_isShowingFavorites;
+    
+    if (_isShowingFavorites) {
+        [_presenter showFavoriteItems];
+    }else{
+        [_presenter showAllItems];
     }
 }
 
