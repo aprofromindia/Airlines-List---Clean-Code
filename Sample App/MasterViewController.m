@@ -13,20 +13,22 @@
 #import "AirlineModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
 #import "AirlineTableViewCell.h"
+#import "MasterDependencies.h"
 
 
 @implementation MasterViewController{
-    MasterPresenter *_presenter;
-    NSArray<ConvertOnDemand> *_viewModel;
+    NSArray<AirlineModel, ConvertOnDemand> *_viewModel;
     BOOL _isShowingFavorites;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [[[MasterDependencies alloc] init] injectView:self];
+    
+    [_presenter setup];
     _isShowingFavorites = NO;
     [self p_showHud];
-    _presenter = [[MasterPresenter alloc] initWithView:self];
     
     //setting up persisting favourite list.
     [[NSNotificationCenter defaultCenter] addObserver:_presenter selector:@selector(saveFavouritesList) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -38,7 +40,7 @@
     }
 }
 
-- (void)setViewModel:(NSArray *)viewModel{
+- (void)setViewModel:(NSArray <ConvertOnDemand, AirlineModel>*)viewModel{
     [self p_showHud];
     if (viewModel) {
         _viewModel = viewModel;

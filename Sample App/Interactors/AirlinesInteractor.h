@@ -14,9 +14,16 @@
 
 @interface AirlinesInteractor : NSObject
 
-- (instancetype)initWithRepository:(id<AirlinesRepository>) repository
-                         presenter:(id<PresenterInterface>) presenter;
+@property(nonnull, nonatomic, weak) id<PresenterInterface> presenter;
+
+NS_ASSUME_NONNULL_BEGIN
+
+- (instancetype)initWithRepository:(id<AirlinesRepository>) repository NS_DESIGNATED_INITIALIZER;
+
+- (nullable instancetype)init NS_UNAVAILABLE;
 
 - (void) fetchAirlines;
+
+NS_ASSUME_NONNULL_END
 
 @end

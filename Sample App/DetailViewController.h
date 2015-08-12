@@ -13,8 +13,7 @@
 
 @interface DetailViewController : UIViewController<DetailViewInterface>
 
-/// Detail presenter.
-@property (nonatomic) DetailPresenter *presenter;
+@property (nonnull, nonatomic, strong) DetailPresenter *presenter;
 
 @end
 

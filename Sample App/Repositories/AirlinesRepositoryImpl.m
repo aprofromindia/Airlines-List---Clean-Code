@@ -29,7 +29,8 @@
     [_restClient fetchDataWithSuccessHandler:^(NSData * data) {
         
         NSError *jsonError = nil;
-        NSArray <ConvertOnDemand> *airlines = [AirlineModel arrayOfModelsFromData:data error:&jsonError];
+        NSArray <AirlineModel, ConvertOnDemand> *airlines = (NSArray <AirlineModel, ConvertOnDemand>*)
+                                            [AirlineModel arrayOfModelsFromData:data error:&jsonError];
         
         if (!jsonError) {
             

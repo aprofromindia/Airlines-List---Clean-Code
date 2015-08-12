@@ -14,8 +14,13 @@
 
 @interface FavouriteAirlinesInteractor : NSObject
 
-- (instancetype)initWithRepository:(id<FavouriteAirlinesRepository>) repository
-                         presenter:(id<FavouritePresenterInterface>) presenter;
+@property(nonnull, nonatomic, weak) id<FavouritePresenterInterface> presenter;
+
+NS_ASSUME_NONNULL_BEGIN
+
+- (instancetype)initWithRepository:(id<FavouriteAirlinesRepository>) repository NS_DESIGNATED_INITIALIZER;
+
+- (nullable instancetype)init NS_UNAVAILABLE;
 
 - (void) fetchList;
 
@@ -24,5 +29,7 @@
 - (void) addAirline:(AirlineModel *) airline;
 
 - (void) removeAirline:(AirlineModel *) airline;
+
+NS_ASSUME_NONNULL_END
 
 @end

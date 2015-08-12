@@ -10,6 +10,26 @@
 #import <Expecta/Expecta.h>
 #import "RESTClientImpl.h"
 
+@interface RESTClientImpl (Test)
+
+@property(nonnull, nonatomic, strong) NSURLSession *urlSession;
+
++ (instancetype) recreateSingleton;
+
+@end
+
+@implementation RESTClientImpl(Test)
+
+@dynamic urlSession;
+
++ (instancetype)recreateSingleton{
+    RESTClientImpl *instance = [[RESTClientImpl alloc] init];
+    instance.urlSession = [NSURLSession sharedSession];
+    return instance;
+}
+
+@end
+
 
 SpecBegin(RESTClientImpl)
 
@@ -18,7 +38,7 @@ describe(@"RESTClientImpl", ^{
     __block RESTClientImpl *_restClient;
     
     beforeEach(^{
-        _restClient = [RESTClientImpl sharedClient];
+        _restClient = [RESTClientImpl recreateSingleton];
     });
     
     it(@"is not nil", ^{

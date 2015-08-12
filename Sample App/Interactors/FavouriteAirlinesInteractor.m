@@ -13,16 +13,13 @@
 @implementation FavouriteAirlinesInteractor{
     NSMutableArray *_favAirlines;
     id<FavouriteAirlinesRepository> _repository;
-    id<FavouritePresenterInterface> _presenter;
 }
 
 - (instancetype)initWithRepository:(id<FavouriteAirlinesRepository>) repository
-                         presenter:(id<FavouritePresenterInterface>) presenter
 {
     self = [super init];
     if (self) {
         _repository = repository;
-        _presenter = presenter;
     }
     return self;
 }

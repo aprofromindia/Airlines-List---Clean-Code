@@ -13,7 +13,7 @@
 @implementation DetailPresenter{
     AirlineModel *_detailVM;
     FavouriteAirlinesInteractor *_interactor;
-    id<DetailViewInterface> _view;
+    id<DetailViewInterface> __weak _view;
 }
 
 - (instancetype)initWithView:(id<DetailViewInterface>)view

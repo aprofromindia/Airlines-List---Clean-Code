@@ -14,37 +14,37 @@
 #import "FavouriteAirlinesRepositoryImpl.h"
 #import "DetailPresenter.h"
 #import <JSONModel/JSONModel.h>
+#import "AirlineModel.h"
 
 @implementation MasterPresenter{
-    AirlinesInteractor *_airlinesInteractor;
-    FavouriteAirlinesInteractor *_favAirlinesInteractor;
+    AirlinesInteractor *_interactor;
+    FavouriteAirlinesInteractor *_favInteractor;
     
-    NSArray<ConvertOnDemand> *_airlines;
+    NSArray<ConvertOnDemand, AirlineModel> *_airlines;
     NSArray *_favAirlines;
     
-    id<MasterViewInterface> _view;
+    id<MasterViewInterface> __weak _view;
 }
 
 - (instancetype)initWithView:(id<MasterViewInterface>) view
+                  interactor:(AirlinesInteractor *) interactor
+         favouriteInteractor:(FavouriteAirlinesInteractor *) favInteractor
 {
     self = [super init];
     if (self) {
         _view = view;
-        
-        AirlinesRepositoryImpl *airlinesRepo = [[AirlinesRepositoryImpl alloc]
-                                                initWithRestClient:[RESTClientImpl sharedClient]];
-        _airlinesInteractor = [[AirlinesInteractor alloc] initWithRepository:airlinesRepo
-                                                                   presenter:self];
-        [_airlinesInteractor fetchAirlines];
-        
-        _favAirlinesInteractor = [[FavouriteAirlinesInteractor alloc]
-                                  initWithRepository:[FavouriteAirlinesRepositoryImpl new] presenter:self];
-        [_favAirlinesInteractor fetchList];
+        _interactor = interactor;
+        _favInteractor = favInteractor;
     }
     return self;
 }
 
-- (void)setResponse:(NSArray *)response{
+- (void) setup{
+    [_interactor fetchAirlines];
+    [_favInteractor fetchList];
+}
+
+- (void)setResponse:(NSArray <ConvertOnDemand, AirlineModel>*)response{
     _airlines = response;
     [self p_setViewModel:_airlines];
 }
@@ -56,7 +56,7 @@
 - (DetailPresenter *) detailPresenterWitView:(id<DetailViewInterface>) view
                                        model:(AirlineModel *) airline{
     DetailPresenter *detailPresenter = [[DetailPresenter alloc] initWithView:view
-                                                                     airline:airline interactor:_favAirlinesInteractor];
+                                                                     airline:airline interactor:_favInteractor];
     return detailPresenter;
 }
 
@@ -69,7 +69,7 @@
 }
 
 - (void) saveFavouritesList{
-    [_favAirlinesInteractor saveList];
+    [_favInteractor saveList];
 }
 
 #pragma mark - private methods

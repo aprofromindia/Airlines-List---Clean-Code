@@ -12,6 +12,10 @@
 
 @interface AirlinesRepositoryImpl : NSObject<AirlinesRepository>
 
+NS_ASSUME_NONNULL_BEGIN
+
 - (instancetype)initWithRestClient:(id<RESTClient>) restClient;
+
+NS_ASSUME_NONNULL_END
 
 @end

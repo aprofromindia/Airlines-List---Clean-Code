@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ViewInterface.h"
 #import "PresenterInterface.h"
-@class AirlineModel, DetailPresenter;
+@class AirlineModel, DetailPresenter, AirlinesInteractor, FavouriteAirlinesInteractor;
 
 @interface MasterPresenter : NSObject<PresenterInterface, FavouritePresenterInterface>
 
@@ -20,7 +20,13 @@
  *
  *  @return object instance
  */
-- (instancetype)initWithView:(id<MasterViewInterface>) view;
+
+
+- (nonnull instancetype)initWithView:(nonnull id<MasterViewInterface>)view
+                          interactor:(nonnull AirlinesInteractor *)interactor
+                 favouriteInteractor:(nonnull FavouriteAirlinesInteractor *)favInteractor NS_DESIGNATED_INITIALIZER;
+
+- (nullable instancetype)init NS_UNAVAILABLE;
 
 
 /*!
@@ -31,8 +37,10 @@
  *
  *  @return Detail Presenter
  */
-- (DetailPresenter *) detailPresenterWitView:(id<DetailViewInterface>) view
-                                       model:(AirlineModel *) airline;
+- (nonnull DetailPresenter *) detailPresenterWitView:(nonnull id<DetailViewInterface>) view
+                                       model:(nonnull AirlineModel *) airline;
+
+- (void) setup;
 
 /// Show all airlines.
 - (void) showAllItems;

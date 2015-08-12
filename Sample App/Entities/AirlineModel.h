@@ -11,6 +11,10 @@
 /// Base URL for Airlines Model.
 extern NSString *const APRAirlineBaseURL;
 
+@protocol AirlineModel <NSObject>
+
+@end
+
 
 @interface AirlineModel : JSONModel<NSCoding>
 

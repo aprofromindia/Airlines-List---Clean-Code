@@ -18,6 +18,7 @@
 		A26D13DC1B515BE500A0AAE1 /* AirlinesRepositoryImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13DB1B515BE500A0AAE1 /* AirlinesRepositoryImpl.m */; };
 		A26D13F11B528EA200A0AAE1 /* AirlineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13F01B528EA200A0AAE1 /* AirlineTableViewCell.m */; };
 		A26D13F31B532C7600A0AAE1 /* RESTClientImplSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13F21B532C7600A0AAE1 /* RESTClientImplSpec.m */; };
+		A271BE7E1B7AB14E0053B2B9 /* MasterDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = A271BE7D1B7AB14E0053B2B9 /* MasterDependencies.m */; };
 		A2A826DD1B4F059600FB3695 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A826DC1B4F059600FB3695 /* main.m */; };
 		A2A826E01B4F059600FB3695 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A826DF1B4F059600FB3695 /* AppDelegate.m */; };
 		A2A826E31B4F059600FB3695 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2A826E21B4F059600FB3695 /* MasterViewController.m */; };
@@ -66,6 +67,8 @@
 		A26D13EF1B528EA200A0AAE1 /* AirlineTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AirlineTableViewCell.h; path = View/AirlineTableViewCell.h; sourceTree = "<group>"; };
 		A26D13F01B528EA200A0AAE1 /* AirlineTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AirlineTableViewCell.m; path = View/AirlineTableViewCell.m; sourceTree = "<group>"; };
 		A26D13F21B532C7600A0AAE1 /* RESTClientImplSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESTClientImplSpec.m; sourceTree = "<group>"; };
+		A271BE7C1B7AB14E0053B2B9 /* MasterDependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterDependencies.h; path = Dependencies/MasterDependencies.h; sourceTree = "<group>"; };
+		A271BE7D1B7AB14E0053B2B9 /* MasterDependencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterDependencies.m; path = Dependencies/MasterDependencies.m; sourceTree = "<group>"; };
 		A2A826D71B4F059600FB3695 /* Sample App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sample App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2A826DB1B4F059600FB3695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2A826DC1B4F059600FB3695 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -118,7 +121,6 @@
 		A26D13BD1B4F175B00A0AAE1 /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				A26D13EC1B52780100A0AAE1 /* PresenterInterface.h */,
 				A26D13CF1B51423200A0AAE1 /* AirlinesInteractor.h */,
 				A26D13D01B51423200A0AAE1 /* AirlinesInteractor.m */,
 				A26D13D21B51479D00A0AAE1 /* FavouriteAirlinesInteractor.h */,
@@ -130,7 +132,7 @@
 		A26D13BE1B505F6300A0AAE1 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				A26D13EB1B5273D300A0AAE1 /* ViewInterface.h */,
+				A26D13EC1B52780100A0AAE1 /* PresenterInterface.h */,
 				A26D13C61B50724B00A0AAE1 /* MasterPresenter.h */,
 				A26D13C71B50724B00A0AAE1 /* MasterPresenter.m */,
 				A26D13C91B50725D00A0AAE1 /* DetailPresenter.h */,
@@ -146,6 +148,24 @@
 				A2F8100D1B4F0BD9008E736E /* RESTClientImpl.m */,
 			);
 			name = Networking;
+			sourceTree = "<group>";
+		};
+		A271BE701B792CE50053B2B9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				A26D13EF1B528EA200A0AAE1 /* AirlineTableViewCell.h */,
+				A26D13F01B528EA200A0AAE1 /* AirlineTableViewCell.m */,
+			);
+			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		A271BE7F1B7AB1530053B2B9 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				A271BE7C1B7AB14E0053B2B9 /* MasterDependencies.h */,
+				A271BE7D1B7AB14E0053B2B9 /* MasterDependencies.m */,
+			);
+			name = Dependencies;
 			sourceTree = "<group>";
 		};
 		A2A826CE1B4F059600FB3695 = {
@@ -177,6 +197,7 @@
 				A26D13BD1B4F175B00A0AAE1 /* Interactors */,
 				A2F8100B1B4F0ABF008E736E /* Entities */,
 				A2F8100F1B4F0BDD008E736E /* Repository */,
+				A271BE7F1B7AB1530053B2B9 /* Dependencies */,
 				A2A826DE1B4F059600FB3695 /* AppDelegate.h */,
 				A2A826DF1B4F059600FB3695 /* AppDelegate.m */,
 				A2A826E71B4F059600FB3695 /* Main.storyboard */,
@@ -217,8 +238,8 @@
 		A2A827031B4F05A000FB3695 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A26D13EF1B528EA200A0AAE1 /* AirlineTableViewCell.h */,
-				A26D13F01B528EA200A0AAE1 /* AirlineTableViewCell.m */,
+				A271BE701B792CE50053B2B9 /* TableViewCell */,
+				A26D13EB1B5273D300A0AAE1 /* ViewInterface.h */,
 				A2A826E11B4F059600FB3695 /* MasterViewController.h */,
 				A2A826E21B4F059600FB3695 /* MasterViewController.m */,
 				A2A826E41B4F059600FB3695 /* DetailViewController.h */,
@@ -230,7 +251,6 @@
 		A2F8100B1B4F0ABF008E736E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				A26D13ED1B52785600A0AAE1 /* AirlinesRepository.h */,
 				A26D13CC1B510B6500A0AAE1 /* AirlineModel.h */,
 				A26D13CD1B510B6500A0AAE1 /* AirlineModel.m */,
 			);
@@ -241,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				A26D13D51B5156F400A0AAE1 /* Networking */,
+				A26D13ED1B52785600A0AAE1 /* AirlinesRepository.h */,
 				A26D13DA1B515BE500A0AAE1 /* AirlinesRepositoryImpl.h */,
 				A26D13DB1B515BE500A0AAE1 /* AirlinesRepositoryImpl.m */,
 				A26D13D61B51573300A0AAE1 /* FavouriteAirlinesRepositoryImpl.h */,
@@ -427,6 +448,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A271BE7E1B7AB14E0053B2B9 /* MasterDependencies.m in Sources */,
 				A2A826E01B4F059600FB3695 /* AppDelegate.m in Sources */,
 				A2A826E31B4F059600FB3695 /* MasterViewController.m in Sources */,
 				A26D13C81B50724B00A0AAE1 /* MasterPresenter.m in Sources */,

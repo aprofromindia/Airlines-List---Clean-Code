@@ -8,27 +8,24 @@
 
 #import "AirlinesInteractor.h"
 #import <JSONModel/JSONModel.h>
+#import "AirlineModel.h"
 
 @implementation AirlinesInteractor{
-    id<AirlinesRepository> _repository;
-    id<PresenterInterface> _presenter;
-    
-    NSArray<ConvertOnDemand> *_airlines;
+    id<AirlinesRepository> _repository;    
+    NSArray<AirlineModel, ConvertOnDemand> *_airlines;
 }
 
 - (instancetype)initWithRepository:(id<AirlinesRepository>) repository
-                         presenter:(id<PresenterInterface>)presenter
 {
     self = [super init];
     if (self) {
         _repository = repository;
-        _presenter = presenter;
     }
     return self;
 }
 
 - (void) fetchAirlines{
-    [_repository fetchAirlinesWithBlock:^(NSArray * airlines) {
+    [_repository fetchAirlinesWithBlock:^(NSArray<AirlineModel, ConvertOnDemand> * airlines) {
         _airlines = airlines;
         [_presenter setResponse:_airlines];
     } errorBlock:^(NSError * error) {

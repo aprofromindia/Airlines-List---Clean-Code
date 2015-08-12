@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "ViewInterface.h"
+@class MasterPresenter;
 
 @interface MasterViewController : UITableViewController<MasterViewInterface>
+
+@property(nonnull, nonatomic, strong) MasterPresenter *presenter;
 
 @end

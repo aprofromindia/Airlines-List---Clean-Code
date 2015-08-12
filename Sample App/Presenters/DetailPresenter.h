@@ -23,9 +23,11 @@
  *
  *  @return Class instance type.
  */
-- (instancetype)initWithView:(id<DetailViewInterface>) view
-                     airline:(AirlineModel *)airline
-                  interactor:(FavouriteAirlinesInteractor *)interactor;
+- (nonnull instancetype)initWithView:(nonnull id<DetailViewInterface>) view
+                     airline:(nonnull AirlineModel *)airline
+                  interactor:(nonnull FavouriteAirlinesInteractor *)interactor NS_DESIGNATED_INITIALIZER;
+
+- (nullable instancetype)init NS_UNAVAILABLE;
 
 /// Adds an airline to the favourite list
 - (void) addToFavourite;
