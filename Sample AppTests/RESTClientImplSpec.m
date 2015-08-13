@@ -12,19 +12,15 @@
 
 @interface RESTClientImpl (Test)
 
-@property(nonnull, nonatomic, strong) NSURLSession *urlSession;
-
 + (instancetype) recreateSingleton;
 
 @end
 
 @implementation RESTClientImpl(Test)
 
-@dynamic urlSession;
-
 + (instancetype)recreateSingleton{
-    RESTClientImpl *instance = [[RESTClientImpl alloc] init];
-    instance.urlSession = [NSURLSession sharedSession];
+    RESTClientImpl *instance = [[self alloc] init];
+    [instance setValue:[NSURLSession sharedSession] forKey:@"_urlSession"];
     return instance;
 }
 
