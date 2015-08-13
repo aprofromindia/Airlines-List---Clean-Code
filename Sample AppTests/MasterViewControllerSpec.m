@@ -10,12 +10,6 @@
 #import <Expecta/Expecta.h>
 #import "MasterViewController.h"
 
-@interface MasterViewController (Test)
-
-@property(nonatomic) NSArray *viewModel;
-
-@end
-
 SpecBegin(MasterViewController)
 
 describe(@"MasterViewController", ^{
@@ -37,12 +31,16 @@ describe(@"MasterViewController", ^{
     context(@"on initial launch", ^{
         
         it(@"viewModel should be nil", ^{
-            expect(_masterVC.viewModel).to.beNil;
+            expect([_masterVC valueForKey:@"_viewModel"]).to.beNil;
         });
         
         it(@"should load the viewModel asynchronously", ^{
-            expect(_masterVC.viewModel).after(15).to.beInstanceOf([NSArray class]);
+            expect([_masterVC valueForKey:@"_viewModel"]).after(15).to.beInstanceOf([NSArray class]);
         });
+    });
+    
+    afterEach(^{
+        _masterVC = nil;
     });
 });
 
