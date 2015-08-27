@@ -35,7 +35,7 @@ describe(@"MasterViewController", ^{
         });
         
         it(@"should load the viewModel asynchronously", ^{
-            expect([_masterVC valueForKey:@"_viewModel"]).after(15).to.beInstanceOf([NSArray class]);
+            expect([_masterVC valueForKey:@"_viewModel"]).after(15).beInstanceOf([NSArray class]);
         });
     });
     

@@ -17,7 +17,7 @@
 
 
 @implementation MasterViewController{
-    NSArray<AirlineModel, ConvertOnDemand> *_viewModel;
+    JSONModelArray *_viewModel;
     BOOL _isShowingFavorites;
 }
 
@@ -42,7 +42,7 @@
     }
 }
 
-- (void)setViewModel:(NSArray <ConvertOnDemand, AirlineModel>*)viewModel{
+- (void)setViewModel:(JSONModelArray *)viewModel{
     [self p_showHud];
     if (viewModel) {
         _viewModel = viewModel;

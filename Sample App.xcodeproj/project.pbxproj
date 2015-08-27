@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2DF7B7A88FC16CEB73BD5A35 /* libPods-Sample AppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A41F72FF023B91C1FB0A00C /* libPods-Sample AppTests.a */; };
 		7B540266BEAD4B2B6F146A77 /* libPods-Sample App.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CF5FC18D7ADF0706015801D /* libPods-Sample App.a */; };
+		A214233A1B7BF67500C665C8 /* AirlineModelSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = A21423391B7BF67500C665C8 /* AirlineModelSpec.m */; };
 		A26D13C81B50724B00A0AAE1 /* MasterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13C71B50724B00A0AAE1 /* MasterPresenter.m */; };
 		A26D13CB1B50725D00A0AAE1 /* DetailPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13CA1B50725D00A0AAE1 /* DetailPresenter.m */; };
 		A26D13CE1B510B6500A0AAE1 /* AirlineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A26D13CD1B510B6500A0AAE1 /* AirlineModel.m */; };
@@ -46,6 +47,7 @@
 		7CFC67A66CDC0B0AB959C61F /* Pods-Sample App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sample App/Pods-Sample App.debug.xcconfig"; sourceTree = "<group>"; };
 		93AE37C807F2110835C568B4 /* Pods-Sample App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sample App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sample App/Pods-Sample App.release.xcconfig"; sourceTree = "<group>"; };
 		9A41F72FF023B91C1FB0A00C /* libPods-Sample AppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sample AppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A21423391B7BF67500C665C8 /* AirlineModelSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirlineModelSpec.m; sourceTree = "<group>"; };
 		A26B11721B53B49000145486 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A26D13C61B50724B00A0AAE1 /* MasterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MasterPresenter.h; path = Presenters/MasterPresenter.h; sourceTree = "<group>"; };
 		A26D13C71B50724B00A0AAE1 /* MasterPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MasterPresenter.m; path = Presenters/MasterPresenter.m; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				A2A826F71B4F059700FB3695 /* Supporting Files */,
 				A26D13F21B532C7600A0AAE1 /* RESTClientImplSpec.m */,
 				A2F389411B545A630075DA05 /* MasterViewControllerSpec.m */,
+				A21423391B7BF67500C665C8 /* AirlineModelSpec.m */,
 			);
 			path = "Sample AppTests";
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A26D13F31B532C7600A0AAE1 /* RESTClientImplSpec.m in Sources */,
+				A214233A1B7BF67500C665C8 /* AirlineModelSpec.m in Sources */,
 				A2F389421B545A630075DA05 /* MasterViewControllerSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

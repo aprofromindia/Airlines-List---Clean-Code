@@ -20,7 +20,7 @@
     AirlinesInteractor *_interactor;
     FavouriteAirlinesInteractor *_favInteractor;
     
-    NSArray<ConvertOnDemand, AirlineModel> *_airlines;
+    JSONModelArray *_airlines;
     NSArray *_favAirlines;
     
     id<MasterViewInterface> __weak _view;
@@ -44,7 +44,7 @@
     [_favInteractor fetchList];
 }
 
-- (void)setResponse:(NSArray <ConvertOnDemand, AirlineModel>*)response{
+- (void)setResponse:(JSONModelArray *)response{
     _airlines = response;
     [self p_setViewModel:_airlines];
 }
@@ -74,7 +74,7 @@
 
 #pragma mark - private methods
 
-- (void) p_setViewModel:(NSArray *) viewModel{
+- (void) p_setViewModel:(JSONModelArray *) viewModel{
     [_view setViewModel:viewModel];
 }
 

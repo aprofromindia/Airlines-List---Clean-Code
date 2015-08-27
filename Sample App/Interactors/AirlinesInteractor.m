@@ -12,7 +12,7 @@
 
 @implementation AirlinesInteractor{
     id<AirlinesRepository> _repository;    
-    NSArray<AirlineModel, ConvertOnDemand> *_airlines;
+    JSONModelArray *_airlines;
 }
 
 - (instancetype)initWithRepository:(id<AirlinesRepository>) repository
@@ -25,7 +25,7 @@
 }
 
 - (void) fetchAirlines{
-    [_repository fetchAirlinesWithBlock:^(NSArray<AirlineModel, ConvertOnDemand> * airlines) {
+    [_repository fetchAirlinesWithBlock:^(JSONModelArray * airlines) {
         _airlines = airlines;
         [_presenter setResponse:_airlines];
     } errorBlock:^(NSError * error) {

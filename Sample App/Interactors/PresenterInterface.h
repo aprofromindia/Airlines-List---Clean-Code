@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class JSONModelArray;
 
 @protocol PresenterInterface <NSObject>
 
 /// Sets Interactor response for all items.
-- (void) setResponse:(NSArray *) response;
+- (void) setResponse:(JSONModelArray *) response;
 
 @end
 

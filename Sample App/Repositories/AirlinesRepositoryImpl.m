@@ -23,15 +23,15 @@
     return self;
 }
 
-- (void) fetchAirlinesWithBlock:(void (^)(NSArray *)) completionBlock
+- (void) fetchAirlinesWithBlock:(void (^)(JSONModelArray *)) completionBlock
                      errorBlock:(void (^)(NSError *)) errorBlock{
     
     [_restClient fetchDataWithSuccessHandler:^(NSData * data) {
         
         NSError *jsonError = nil;
-        NSArray <AirlineModel, ConvertOnDemand> *airlines = (NSArray <AirlineModel, ConvertOnDemand>*)
-                                            [AirlineModel arrayOfModelsFromData:data error:&jsonError];
-        
+        JSONModelArray *airlines = [[JSONModelArray alloc] initWithArray:[AirlineModel
+                                                                          arrayOfModelsFromData:data error:&jsonError]
+                                                              modelClass:[AirlineModel class]];
         if (!jsonError) {
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{

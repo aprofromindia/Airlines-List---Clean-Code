@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-@class AirlineModel;
+@class AirlineModel, JSONModelArray;
 
 @protocol AirlinesRepository <NSObject>
 
@@ -18,7 +18,7 @@
  *  @param completionBlock Success completion block
  *  @param errorBlock      Error completion block.
  */
-- (void) fetchAirlinesWithBlock:(void (^)(NSArray *)) completionBlock
+- (void) fetchAirlinesWithBlock:(void (^)(JSONModelArray *)) completionBlock
                      errorBlock:(void (^)(NSError *)) errorBlock;
 
 @end

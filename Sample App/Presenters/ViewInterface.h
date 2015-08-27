@@ -8,12 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@class AirlineModel;
+@class AirlineModel, JSONModelArray;
 
 @protocol MasterViewInterface <NSObject>
 
 /// Sets View Model into Master view.
-- (void) setViewModel:(NSArray *) viewModel;
+- (void) setViewModel:(JSONModelArray *) viewModel;
 
 @end
 
