@@ -14,7 +14,7 @@
 
 @interface FavouriteAirlinesInteractor : NSObject
 
-@property(nonnull, nonatomic, weak) id<FavouritePresenterInterface> presenter;
+@property(nullable, nonatomic, weak) id<FavouritePresenterInterface> presenter;
 
 NS_ASSUME_NONNULL_BEGIN
 
